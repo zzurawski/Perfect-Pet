@@ -1,5 +1,4 @@
 const { Model, DataTypes } = require("sequelize");
-
 const sequelize = require("../config/connection");
 
 class Pet extends Model {}
@@ -24,12 +23,24 @@ Pet.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    image: {
-      type: DataTypes.BLOB("long"),
+    posted: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      refrences: {
+        Model: "user",
+        Key: "id",
+      },
     },
   },
   {
     sequelize,
+    freezeTableName: true,
+    underscored: true,
+    timestamps: false,
     modelName: "pet",
   }
 );
