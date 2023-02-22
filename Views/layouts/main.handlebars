@@ -11,11 +11,33 @@
 <body>
  
 <header>
-  
+  <h1><p>Perfect Pets!</p></h1>
+  <nav>
+  <div class="row">
+    <div class="col">
+      <a href="/About Us">About Us</a>
+    </div>
+    <div class="col">
+      <a href="/Pets">Pets</a>
+    </div>
+    <div class="col">
+      {{#if logged_in}}
+      <button class="no-button" id="logout">Logout</button>
+      {{#else}}
+      <a href="/login">Log in/Sign Up</a>
+      {{/if}}
+      </div>
+  </nav>
+  </div>
+</div>
 </header>
   <main class="container container-fluid mt-5">
     <!-- Render the contents of the sub layout here -->
+
+
     {{{ body }}}
+
+
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
