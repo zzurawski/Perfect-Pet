@@ -27,7 +27,7 @@ Comment.belongsTo(User, {
   foreignKey: "userId",
 });
 // pet has many images or one? double check on wednesday
-Pet.hasMany(Image, {
+Pet.hasOne(Image, {
   foreignKey: "petId",
 });
 // image belongs to one pet
