@@ -25,12 +25,11 @@ Image.init(
     postId: {
       type: DataTypes.INTEGER,
       references: {
-        Model: "pet",
-        Key: "id",
+        model: "pet",
+        key: "id",
       },
     },
   },
-  //   whats wrong here
   {
     sequelize,
     freezeTableName: true,
@@ -39,3 +38,5 @@ Image.init(
     modelName: "image",
   }
 );
+
+module.exports = Image;

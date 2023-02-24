@@ -7,3 +7,4 @@ const apiRoutes = require("./api/");
 router.use("/", mainroutes);
 router.use("/api", apiRoutes);
 
+module.exports = router

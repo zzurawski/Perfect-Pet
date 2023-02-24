@@ -13,8 +13,16 @@ router.get("/pets", async (req, res) => {
   }
 });
 
-router.get("/", (req, res) => {
-  res.render("homepage");
+router.get("/", async (req, res) => {
+ try {
+    const petsData = await Pet.findAll({
+      include: [User, { model: Image }],
+    });
+    const pets = petsData.map((pets) => pets.get({ plain: true }));
+    res.render("homepage", { pets, logged_in: req.session.logged_in });
+  } catch (error) {
+    req.statusCode(500).json(error);
+  }
 });
 
 router.get("/singlepet/:id", async (req, res) => {

@@ -1,16 +1,33 @@
-{{!-- Put a very cliche about us on here. --}}
+{{! Put a very cliche about us on here. }}
 
 <header>
-    <h1>Perfect Pet</h1>
-        <p>Personally Dedicated to Finding your Perfect Companion"</p>
-    <button>Login</button>
+  <h1>Perfect Pet</h1>
+  <p>Personally Dedicated to Finding your Perfect Companion"</p>
 </header>
 
 <div>
-    <h2>About Us</h2>
-        <p>
-            Here at 'Perfect Pet', we believe life should always have good company. We pride ourselves on placing people to companions that can fufill each of our lives to a higher degree. 
-            With the wonders of technology, we find pets from owners or shelters from around the country with pets in need. Each pet has their own unique personalities and so do we. 
-            Through our website, you can filter based on your individual preferences to find that truly Perfect Pet.
+  <h2>About Us</h2>
+  <p>
+    Here at 'Perfect Pet', we believe life should always have good company. We
+    pride ourselves on placing people to companions that can fufill each of our
+    lives to a higher degree. With the wonders of technology, we find pets from
+    owners or shelters from around the country with pets in need. Each pet has
+    their own unique personalities and so do we. Through our website, you can
+    filter based on your individual preferences to find that truly Perfect Pet.
+  </p>
+  {{#each pets as |pet|}}
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{name}}</h5>
+      <p class="card-text"><ul>
+        <li>{{pet.age}}</li>
+        <li>{{pet.gender}}</li>
+        <li>{{pet.posted}}</li>
+        </ul>
         </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    {{/each}}
+  </div>
 </div>

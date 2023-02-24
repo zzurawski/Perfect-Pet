@@ -20,7 +20,7 @@ Pet.init(
       allowNull: false,
     },
     gender: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     posted: {
@@ -30,9 +30,9 @@ Pet.init(
     },
     userId: {
       type: DataTypes.INTEGER,
-      refrences: {
-        Model: "user",
-        Key: "id",
+      references: {
+        model: "user",
+        key: "id",
       },
     },
   },
