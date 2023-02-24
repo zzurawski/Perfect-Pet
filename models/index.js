@@ -1,6 +1,8 @@
 const Pet = require("./pets");
 const User = require("./user");
 const Comment = require("./Comment");
+const Image = require("./Image");
+
 
 //user has ability to post multiple pets
 User.hasMany(Pet, {
