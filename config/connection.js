@@ -1,7 +1,8 @@
+const { profile } = require("console");
 const Sequelize = require("sequelize");
-
 require("dotenv").config();
 
+// PLEASE NOTE EVERYONE WILL HAVE THEIR OWN ENV PASS CODES< EVERYONE MUST HAVE ENV FILE
 
 const sequelize = process.env.JAWSDB_URL
   ? new Sequelize(process.env.JAWSDB_URL)
