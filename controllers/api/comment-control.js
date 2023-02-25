@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { Comment } = require("../../models");
-const { route } = require("./pet-control");
 
 router.post("/", async (req, res) => {
   try {
