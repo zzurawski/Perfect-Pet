@@ -3,8 +3,6 @@ module.exports = {
     return `${date.getMonth() + 1}/${date.getDate()}/${date
       .getFullYear()
       .toString()
-      .slice(-2)}}`;
+      .slice(-2)}`;
   },
 };
-
-

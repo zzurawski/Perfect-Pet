@@ -17,6 +17,7 @@ router.get("/", async (req, res) => {
   try {
     const petsData = await Pet.findAll({
       include: [User, { model: Image }],
+      limit: 4,
     });
     const pets = petsData.map((pets) => pets.get({ plain: true }));
     res.render("homepage", { pets, logged_in: req.session.logged_in });
