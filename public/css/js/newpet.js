@@ -1,8 +1,8 @@
 const newpethandler = async function (event) {
-  event.preventdeafult();
-  const name = document.getElementById("#petnameinput").value;
-  const age = document.getElementById("#petageinput").value;
-  const gender = document.getElementById("#pet-gender").value;
+  event.preventDeafult();
+  const name = document.getElementById("petnameinput").value;
+  const age = document.getElementById("petageinput").value;
+  const gender = document.getElementById("pet-gender").value;
 
   await fetch(`/api/pet`, {
     method: "POST",
