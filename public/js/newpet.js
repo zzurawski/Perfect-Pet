@@ -3,7 +3,7 @@ const newpethandler = async function (event) {
   const name = document.getElementById("petnameinput").value;
   const age = document.getElementById("petageinput").value;
   const gender = document.getElementById("pet-gender").value;
-
+   console.log('click')
   await fetch(`/api/pet`, {
     method: "POST",
     body: JSON.stringify({
