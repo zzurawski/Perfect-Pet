@@ -14,7 +14,7 @@ router.get("/pets", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
- try {
+  try {
     const petsData = await Pet.findAll({
       include: [User, { model: Image }],
     });

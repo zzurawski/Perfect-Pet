@@ -23,10 +23,10 @@
       <p class="card-text"><ul>
         <li>{{pet.age}}</li>
         <li>{{pet.gender}}</li>
-        <li>{{pet.posted}}</li>
+        <li>{{date_maker pet.posted}}</li>
         </ul>
         </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="/singlepet/{{pet.id}}" class="btn btn-primary">see more</a>
     </div>
     {{/each}}
   </div>

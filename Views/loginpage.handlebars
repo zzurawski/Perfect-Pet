@@ -1,36 +1,49 @@
-{{!-- This page will render if you need to login or sign up  --}}
+{{! This page will render if you need to login or sign up  }}
 
-
-
-<form>
-    <h2>Log In</h2>
+<form id="login-section">
+  <h2>Log In</h2>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="emailinput" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="inputEmail"
+      aria-describedby="email"
+    />
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="passwordinput" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword" />
+  </div>
   <button type="submit" class="btn btn-primary">Log in</button>
 </form>
 
+<form id="signupnow">
+  <h2>Sign Up</h2>
+  <div class="mb-3">
+    <label for="Inputname" class="form-label">Username</label>
+    <input
+      type="name"
+      class="form-control"
+      id="inputUser"
+      aria-describedby="user"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="email-input" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="inputEmail2"
+      aria-describedby="email"
+    />
+  </div>
 
-<form>
-    <h2>Sign Up</h2>
-     <div class="mb-3">
-    <label for="Inputname" class="form-label">Full name</label>
-    <input type="name" class="form-control" id="nameinput" aria-describedby="emailHelp">
-  </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <label for="password-input" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" />
   </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-    <div class="col-auto">
+  <div class="col-auto">
     <span id="passwordHelpInline" class="form-text">
       Must be at least 8 characters long.
     </span>

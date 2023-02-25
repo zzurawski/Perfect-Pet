@@ -4,6 +4,7 @@
       <div class="col-12">
         <div class="card text-center" id="display">
           <div class="card-header">
+            <input type="hidden" id="petone" name="pet-id" value="{{pet.id}}" />
             <p class="card-text"><a
                 href="/singlepet/{{pet.id}}"
               >{{pet.name}}</a>
@@ -13,6 +14,7 @@
           <div class="card-body">
             <p class="card-text">{{pet.image}}</p>
             <p class="card-text"> posted by: {{pet.user.username}}</p>
+            <button id="deleteme">delete posting</button>
           </div>
         </div>
       </div>
