@@ -18,3 +18,9 @@ router.get("/", async (req, res) => {
     res.statusCode(500).json(error);
   }
 });
+
+router.get("/newpet", (req, res) => {
+  res.render("newpet", {
+    layout: "dashboard",
+  });
+});
