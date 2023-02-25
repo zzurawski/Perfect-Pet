@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
-
+const helpers = require("./utils/date");
 const routes = require("./controllers");
 
 const sequelize = require("./config/connection");
@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 
 
 
-const hbs = exphbs.create({});
+const hbs = exphbs.create({ helpers });
 
 const sess = {
   secret: process.env.SECRET,

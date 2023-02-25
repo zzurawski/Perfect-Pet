@@ -15,6 +15,7 @@
     their own unique personalities and so do we. Through our website, you can
     filter based on your individual preferences to find that truly Perfect Pet.
   </p>
+  <div class="card-group">
   {{#each pets as |pet|}}
   <div class="card" style="width: 18rem;">
     <img src="..." class="card-img-top" alt="..." />
@@ -26,8 +27,9 @@
         <li>{{date_maker pet.posted}}</li>
         </ul>
         </p>
-      <a href="/singlepet/{{pet.id}}" class="btn btn-primary">see more</a>
+      <a href="/singlepet/{{pet.id}}" class="btn btn-primary">See more</a>
+    </div>
     </div>
     {{/each}}
-  </div>
-</div>
+    </div>
+ 

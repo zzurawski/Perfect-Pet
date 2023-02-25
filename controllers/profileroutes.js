@@ -5,9 +5,9 @@ router.get("/", async (req, res) => {
   try {
     const petInfo = await Pet.findAll({
       include: [User, Image],
-      where: {
-        userId: req.session.userId,
-      },
+      // where: {
+      //   userId: req.session.userId,
+      // },
     });
     const pets = petInfo.map((pet) => pet.get({ plain: true }));
     res.render("yourpets", {
@@ -15,12 +15,14 @@ router.get("/", async (req, res) => {
       pets,
     });
   } catch (error) {
-    res.statusCode(500).json(error);
+    res.status(500).json(error);
   }
 });
 
 router.get("/newpet", (req, res) => {
   res.render("newpet", {
-    layout: "dashboard",
+    layout: "profile",
   });
 });
+
+module.exports = router;
