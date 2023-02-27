@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { Pet } = require("../../models");
+const logAuth = require("../../utils/auth");
 
-router.post("/", async (req, res) => {
+router.post("/", logAuth, async (req, res) => {
   try {
     const petInfo = await Pet.create({
       name: req.body.name,
@@ -18,7 +19,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", logAuth, async (req, res) => {
   try {
     const petInfo = await Pet.destroy({
       where: {

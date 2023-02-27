@@ -6,6 +6,7 @@ router.post("/", async (req, res) => {
     const userVal = await User.create(req.body);
     req.session.save(() => {
       req.session.userId = userVal.id;
+      req.session.email = userVal.email;
       req.session.logged_in = true;
       res.status(200).json({ message: "welcome to pet perfect" });
     });

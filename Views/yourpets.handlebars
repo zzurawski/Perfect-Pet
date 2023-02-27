@@ -4,7 +4,12 @@
       <div class="col-12">
         <div class="card text-center" id="display">
           <div class="card-header">
-            <input type="hidden" id="petone" name="pet-id" value="{{pet.id}}" />
+            <input
+              type="hidden"
+              class="petone"
+              name="pet-id"
+              value="{{pet.id}}"
+            />
             <p class="card-text"><a
                 href="/singlepet/{{pet.id}}"
               >{{pet.name}}</a>
@@ -14,10 +19,12 @@
           <div class="card-body">
             <p class="card-text">{{pet.image}}</p>
             <p class="card-text"> posted by: {{pet.user.username}}</p>
-            <button id="deleteme">delete posting</button>
+            <button class="deleteme" data-id="{{pet.id}}">delete posting</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 {{/each}}
+
+<script src="/js/delete.js"></script>
