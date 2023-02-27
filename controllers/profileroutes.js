@@ -23,6 +23,7 @@ router.get("/", async (req, res) => {
 router.get("/newpet", (req, res) => {
   res.render("newpet", {
     layout: "profile",
+    logged_in: req.session.logged_in,
   });
 });
 
