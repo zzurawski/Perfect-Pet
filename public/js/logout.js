@@ -10,4 +10,4 @@ const logoutFunc = async function () {
   }
 };
 
-document.querySelector("logouttime").addEventListener("click", logoutFunc);
+document.querySelector("#logout").addEventListener("click", logoutFunc);

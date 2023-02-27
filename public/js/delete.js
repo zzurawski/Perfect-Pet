@@ -1,8 +1,8 @@
 const deletebutton = document.querySelectorAll(".deleteme");
 deletebutton.forEach((button) => {
-  button.addEventListener("click", async function () {
+  button.addEventListener("click", async function (event) {
     console.log("click");
-    const id = button.parentNode.querySelector(".petone").value;
+    const id = event.target.dataset.id;
     await fetch(`/api/pet/${id}`, {
       method: "DELETE",
     });
