@@ -18,10 +18,13 @@
   <div class="card-group">
   {{#each pets as |pet|}}
   <div class=" card card-home">
-    <img src="..." class="card-img-top" alt="..." />
+    
     <div class="card-body">
       <h5 class="card-title">{{name}}</h5>
       <p class="card-text"><ul>
+        <li><img
+              src="data:image/jpeg;base64, {{pet.image.data}}"
+            /></p></li>
         <li>{{pet.age}}</li>
         <li>{{pet.gender}}</li>
         <li>{{date_maker pet.posted}}</li>
