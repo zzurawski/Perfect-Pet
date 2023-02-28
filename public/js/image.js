@@ -12,6 +12,6 @@ let imagesPreview = function (input, placeToInsertImagePreview) {
     }
   }
 };
-$("#input-files").on("change", function () {
+$("#formFile").on("change", function () {
   imagesPreview(this, "div.preview-images");
 });
