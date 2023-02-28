@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { Pet, User, Image } = require("../models");
+const logAuth = require("../utils/auth");
 
-router.get("/", async (req, res) => {
+router.get("/", logAuth, async (req, res) => {
   try {
     const petInfo = await Pet.findAll({
       include: [User, Image],
@@ -20,7 +21,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/newpet", (req, res) => {
+router.get("/newpet", logAuth, (req, res) => {
   res.render("newpet", {
     layout: "profile",
     logged_in: req.session.logged_in,
