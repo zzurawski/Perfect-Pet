@@ -16,10 +16,10 @@
   <nav>
   <div class="d-flex justify-content-around mt-3">
     <div class="col">
-      <a href="/profile">Profile</a>
+      <a href="/profile" id="profile">Profile</a>
     </div>
     <div class="col">
-      <a href="/Pets">Pets</a>
+      <a href="/Pets" id="pets">Pets</a>
     </div>
       {{#if logged_in}}
     <div class="col">
@@ -27,7 +27,7 @@
       </div>
   {{else}}
    <div class="col">
-      <a href="/Login">Login</a>
+      <a href="/Login" id="login">Login</a>
     </div>
       {{/if}}
   </nav>
