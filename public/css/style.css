@@ -54,7 +54,8 @@ body {
 }
 
 .card {
-  background: rgb(255, 193, 123);
+  background: rgb(255, 240, 190);
+  border: 2px black solid;
 }
 
 #logout {
