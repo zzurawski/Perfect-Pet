@@ -1,8 +1,13 @@
 const router = require("express").Router();
-const { Pet } = require("../../models");
+const { Pet, Image } = require("../../models");
 const logAuth = require("../../utils/auth");
+const upload = require("../../utils/upload");
+const fs = require('fs')
 
-router.post("/", logAuth, async (req, res) => {
+router.post("/", logAuth, upload.single("file"), async (req, res) => {
+  if (req.file == undefined) {
+    return res.send(`You must select a file.`);
+  }
   try {
     const petInfo = await Pet.create({
       name: req.body.name,
@@ -13,6 +18,21 @@ router.post("/", logAuth, async (req, res) => {
     if (!petInfo) {
       res.status(400).json({ message: "failed to create" });
     }
+
+    const image = await Image.create({
+      type: req.file.mimetype,
+      name: req.file.originalname,
+      data: fs.readFileSync(
+        __dirname +
+          "/../../resources/static/assets/uploads/" +
+          req.file.filename,
+        { encoding: "base64" }
+      ),
+      petId: petInfo.id,
+    });
+    fs.unlinkSync(
+      __dirname + "/../../resources/static/assets/uploads/" + req.file.filename
+    );
     res.status(200).json(petInfo);
   } catch (error) {
     res.status(500).json(error, { message: "something went wrong" });
