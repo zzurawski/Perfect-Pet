@@ -32,8 +32,7 @@ router.get("/singlepet/:id", async (req, res) => {
       include: [
         User,
         {
-          model: Comment,
-          include: [User],
+          model: Image,
         },
       ],
     });
