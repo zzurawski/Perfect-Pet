@@ -14,7 +14,7 @@ The login/signup button in the top-right corner prompts the user to make an acco
 MIT
 
 ## Deployed Application
-*insert here*
+Heroku
 
 ## Github Link
 https://github.com/zzurawski/Perfect-Pet
