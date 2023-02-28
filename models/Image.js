@@ -22,7 +22,7 @@ Image.init(
       type: DataTypes.BLOB("long"),
       allowNull: false,
     },
-    postId: {
+    petId: {
       type: DataTypes.INTEGER,
       references: {
         model: "pet",
