@@ -70,3 +70,18 @@ body {
   color: black;
   cursor: grab;
 }
+
+#profile:hover {
+  color:bisque;
+  cursor: grab;
+}
+
+#pets:hover {
+  color: bisque;
+  cursor: grab;
+}
+
+#login:hover {
+  color: bisque;
+  cursor: grab;
+}
