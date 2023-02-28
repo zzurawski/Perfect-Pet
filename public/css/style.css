@@ -50,11 +50,11 @@ li {
 }
 
 body {
-  background: teal;
+  background: rgb(71, 122, 122);
 }
 
 .card {
-  background: gold;
+  background: rgb(255, 193, 123);
 }
 
 #logout {
