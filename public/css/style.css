@@ -58,8 +58,14 @@ body {
 }
 
 #logout {
-  background-color: darkblue;
+  background-color: rgb(0, 0, 17);
   color: bisque;
   text-align: center;
   font-weight: bold;
+}
+
+#logout:hover {
+  background-color: teal;
+  color: black;
+  cursor: grab;
 }
