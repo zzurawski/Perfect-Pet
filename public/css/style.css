@@ -4,8 +4,10 @@ h1 {
 }
 
 .begin {
-  background-color: rgb(0, 44, 44);
+  background-image: linear-gradient(rgb(9, 82, 87), teal);
+  color: bisque;
   border: 5px solid black;
+  text-align: center;
 }
 
 .begin a {
@@ -13,6 +15,11 @@ h1 {
   color: black;
   font-size: 25px;
   margin: 100px;
+}
+
+#nav {
+  font-weight: bold;
+  text-decoration: underline black;
 }
 
 a {
