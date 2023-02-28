@@ -56,3 +56,10 @@ body {
 .card {
   background: gold;
 }
+
+#logout {
+  background-color: darkblue;
+  color: bisque;
+  text-align: center;
+  font-weight: bold;
+}
