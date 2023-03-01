@@ -15,24 +15,23 @@
     filter based on your individual preferences to find that truly Perfect Pet.
   </p>
 </div>
-<section class="d-flex flex-row flex-wrap justify-content-center"> 
+<section class="d-flex flex-row flex-wrap justify-content-center">
   {{#each pets as |pet|}}
-  <div class=" card card-home">
-    
-    <div class="card-body">
-      <h5 class="card-title">{{name}}</h5>
-      <p class="card-text"><ul>
-        <li><img
-              src="data:image/jpeg;base64, {{pet.image.data}}"
-            /></p></li>
-        <li>{{pet.age}}</li>
-        <li>{{pet.gender}}</li>
-        <li>{{date_maker pet.posted}}</li>
-        </ul>
-        </p>
-      <a href="/singlepet/{{pet.id}}" class="btn btn-primary btn-home">See more</a>
+    <div class="card card-pets text-center" id="display">
+      <div class="card-header">
+        <p class="card-text"><a href="/singlepet/{{pet.id}}">{{pet.name}}</a>
+          posted on
+          {{date_maker pet.posted}}</p>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><img
+            src="data:image/jpeg;base64, {{pet.image.data}}"
+          /></p>
+        <p class="card-text"> posted by: {{pet.user.username}}</p>
+        <p class="card-text">
+          <a href="/singlepet/{{pet.id}}" class="btn btn-primary btn-home">See
+            more</a></p>
+      </div>
     </div>
-    </div>
-    {{/each}}
-    </section>
- 
+  {{/each}}
+</section>
