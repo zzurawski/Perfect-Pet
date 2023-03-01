@@ -104,6 +104,10 @@ img {
 }
 .card-text a {
   font-size: 15px;
+  font-weight: bold;
+}
+.card-text a:hover {
+  color: teal;
 }
 .title a {
   /* margin-left: 70px; */
@@ -112,7 +116,7 @@ img {
 
 .title a:hover {
   color: bisque;
-
+}
 .mb-6 {
   color: bisque;
   text-align: center;
@@ -136,4 +140,9 @@ img {
   background-color: bisque;
   font-style: italic;
 }
->>>>>>>>> Temporary merge branch 2
+
+.card-pets {
+  max-width: 239.34px;
+  min-width: 239.34px;
+  min-height: 331.17px;
+}

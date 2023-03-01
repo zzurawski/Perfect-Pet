@@ -1,8 +1,8 @@
-{{#each pets as |pet|}}
-  <section class="card-group">
-    {{! <div class="row"> }}
+<section class="d-flex flex-row flex-wrap justify-content-center">
+  {{#each pets as |pet|}}
+    {{! <div class="d-flex flex-row flex-wrap"> }}
     {{! <div class="col-12"> }}
-    <div class="card text-center" id="display">
+    <div class="card card-pets text-center" id="display">
       <div class="card-header">
         <p class="card-text"><a href="/singlepet/{{pet.id}}">{{pet.name}}</a>
           posted on
@@ -13,9 +13,11 @@
             src="data:image/jpeg;base64, {{pet.image.data}}"
           /></p>
         <p class="card-text"> posted by: {{pet.user.username}}</p>
+        <p class="card-text"><a href="mailto:{{pet.user.email}}">
+            Contact</a></p>
       </div>
     </div>
     {{! </div> }}
     {{! </div> }}
-  </section>
-{{/each}}
+  {{/each}}
+</section>
