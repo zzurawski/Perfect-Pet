@@ -16,13 +16,13 @@
   <nav>
   <div class="d-flex justify-content-around mt-3">
     <div class="col">
-      <a href="/">Home</a>
+      <a href="/" id="profile-home">Home</a>
     </div>
     <div class="col" >
-      <a href="/pets">Pets</a>
+      <a href="/pets" id="profile-pets">Pets</a>
     </div>
    <div class="col">
-      <a href="/profile/newpet">New Pet</a>
+      <a href="/profile/newpet" id="profile-newpet">New Pet</a>
     </div>
     <div class="col">
       {{#if logged_in}}
@@ -32,10 +32,12 @@
       {{/if}}
       </div>
   </nav>
-  <div>
-    <h2 class="title2">Your Pet Posts</h2>
-  </div>
 </header>
+
+<div>
+  <h2 class="title2" id="profile-yourpets">Your Pet Posts</h2>
+</div>
+
   <main class="container container-fluid mt-5">
     <!-- Render the contents of the sub layout here -->
 
