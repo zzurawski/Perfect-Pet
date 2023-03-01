@@ -112,4 +112,28 @@ img {
 
 .title a:hover {
   color: bisque;
+
+.mb-6 {
+  color: bisque;
+  text-align: center;
+  font-style: italic;
 }
+
+#homepage-main {
+  background-color: bisque;
+  color: rgb(0, 0, 0);
+  font-weight: lighter;
+  text-align: center;
+  border: 2px dotted rgb(0, 99, 99);
+}
+
+#aboutus-header {
+  text-decoration: underline;
+  color: rgb(0, 29, 29);
+}
+
+#about-us {
+  background-color: bisque;
+  font-style: italic;
+}
+
