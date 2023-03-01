@@ -1,21 +1,23 @@
-{{#each pets as |pet|}}
-  <section class="container mt-3">
-    <div class="row">
-      <div class="col-12">
-        <div class="card text-center" id="display">
-          <div class="card-header">
-            <p class="card-text"><a
-                href="/singlepet/{{pet.id}}"
-              >{{pet.name}}</a>
-              posted on
-              {{date_maker pet.posted}}</p>
-          </div>
-          <div class="card-body">
-            <p class="card-text">{{pet.image}}</p>
-            <p class="card-text"> posted by: {{pet.user.username}}</p>
-          </div>
-        </div>
+<section class="d-flex flex-row flex-wrap justify-content-center">
+  {{#each pets as |pet|}}
+    {{! <div class="d-flex flex-row flex-wrap"> }}
+    {{! <div class="col-12"> }}
+    <div class="card card-pets text-center" id="display">
+      <div class="card-header">
+        <p class="card-text"><a href="/singlepet/{{pet.id}}">{{pet.name}}</a>
+          posted on
+          {{date_maker pet.posted}}</p>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><img
+            src="data:image/jpeg;base64, {{pet.image.data}}"
+          /></p>
+        <p class="card-text"> posted by: {{pet.user.username}}</p>
+        <p class="card-text"><a href="mailto:{{pet.user.email}}">
+            Contact</a></p>
       </div>
     </div>
-  </section>
-{{/each}}
+    {{! </div> }}
+    {{! </div> }}
+  {{/each}}
+</section>
