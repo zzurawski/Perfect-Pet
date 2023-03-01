@@ -137,3 +137,33 @@ img {
   font-style: italic;
 }
 
+#profile-home:hover {
+  color:bisque;
+  cursor: grab;
+}
+
+#profile-home {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#profile-pets {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#profile-pets:hover {
+  color:bisque;
+  cursor: grab;
+}
+
+#profile-newpet:hover {
+  color:bisque;
+  cursor: grab;
+}
+
+#profile-newpet {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
