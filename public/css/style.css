@@ -57,7 +57,7 @@ li {
   text-align: left;
 }
 
-.title {
+.title a {
   margin-left: 70px;
 }
 
@@ -66,7 +66,7 @@ body {
 }
 
 .card {
-  background: rgb(255, 240, 190);
+  background: bisque;
   border: 2px black solid;
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 #profile:hover {
-  color:bisque;
+  color: bisque;
   cursor: grab;
 }
 
@@ -97,6 +97,21 @@ body {
   color: bisque;
   cursor: grab;
 }
+
+img {
+  max-width: 214px;
+  max-height: 214px;
+}
+.card-text a {
+  font-size: 15px;
+}
+.title a {
+  /* margin-left: 70px; */
+  font-size: 45px;
+}
+
+.title a:hover {
+  color: bisque;
 
 .mb-6 {
   color: bisque;
@@ -151,3 +166,4 @@ body {
   font-weight: bold;
   text-decoration: underline;
 }
+

@@ -1,8 +1,8 @@
 {{! Put a very cliche about us on here. }}
 
 <header class="mb-6">
-  <h1>Perfect Pet</h1>
-  <p>Personally Dedicated to Finding your Perfect Companion"</p>
+  <h2>Perfect Pet</h2>
+  <p>Personally Dedicated to Finding your Perfect Companion</p>
 </header>
 
 <div>
@@ -18,10 +18,13 @@
   <div class="card-group">
   {{#each pets as |pet|}}
   <div class=" card card-home">
-    <img src="..." class="card-img-top" alt="..." />
+    
     <div class="card-body">
       <h5 class="card-title">{{name}}</h5>
       <p class="card-text"><ul>
+        <li><img
+              src="data:image/jpeg;base64, {{pet.image.data}}"
+            /></p></li>
         <li>{{pet.age}}</li>
         <li>{{pet.gender}}</li>
         <li>{{date_maker pet.posted}}</li>

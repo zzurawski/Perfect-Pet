@@ -19,7 +19,11 @@ router.get("/", async (req, res) => {
       include: [User, { model: Image }],
       limit: 4,
     });
+
+    console.log(petsData);
     const pets = petsData.map((pets) => pets.get({ plain: true }));
+    console.log("++++++pets now +++++++++");
+    console.log(pets);
     res.render("homepage", { pets, logged_in: req.session.logged_in });
   } catch (error) {
     req.statusCode(500).json(error);
@@ -32,8 +36,7 @@ router.get("/singlepet/:id", async (req, res) => {
       include: [
         User,
         {
-          model: Comment,
-          include: [User],
+          model: Image,
         },
       ],
     });

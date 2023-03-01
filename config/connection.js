@@ -1,4 +1,3 @@
-const { profile } = require("console");
 const Sequelize = require("sequelize");
 require("dotenv").config();
 

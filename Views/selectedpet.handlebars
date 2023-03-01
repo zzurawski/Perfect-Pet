@@ -6,7 +6,9 @@
           <p class="card-text"> {{pet.name}} posted by {{pet.user.username}}</p>
         </div>
         <div class="card-body">
-          <p class="card-text">{{pet.image}}</p>
+          <p class="card-text"><img
+              src="data:image/jpeg;base64, {{pet.image.data}}"
+            /></p>
           <p class="card-text"> Age: {{pet.age}}</p>
           <p class="card-text"> Gender: {{pet.gender}} </p>
           <p class="card-text"> Date Posted: {{date_maker pet.posted}}</p>
