@@ -1,3 +1,6 @@
+<div>
+  <h2 class="title2" id="profile-yourpets">Your Pet Posts</h2>
+</div>
 {{#each pets as |pet|}}
   <section class="container mt-3">
     <div class="row">
@@ -17,7 +20,9 @@
               {{date_maker pet.posted}}</p>
           </div>
           <div class="card-body">
-            <p class="card-text"><img src="data:image/jpeg;base64, {{pet.image.data}}"/></p>
+            <p class="card-text"><img
+                src="data:image/jpeg;base64, {{pet.image.data}}"
+              /></p>
             <p class="card-text"> posted by: {{pet.user.username}}</p>
             <button class="deleteme" data-id="{{pet.id}}">delete posting</button>
           </div>

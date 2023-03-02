@@ -36,10 +36,10 @@ h2 {
   text-align: center;
   margin-top: 30px;
 }
-
+/* 
 /* .card-home {
-  /* text-align: center; */
-} */
+   text-align: center; 
+}  */
 
 /* .card-home h5 {
   margin-left: 30px;
@@ -128,7 +128,7 @@ img {
   color: rgb(0, 0, 0);
   font-weight: lighter;
   text-align: center;
-  border: 2px dotted rgb(0, 99, 99);
+  border: 2px solid rgb(0, 99, 99);
 }
 
 #aboutus-header {
@@ -181,4 +181,10 @@ img {
   text-decoration: underline;
   color: bisque;
   text-align: center;
+}
+#profile,
+#pets,
+#login {
+  font-weight: bold;
+  text-decoration: underline;
 }
