@@ -28,6 +28,10 @@ Pet.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     userId: {
       type: DataTypes.INTEGER,
       references: {

@@ -3,17 +3,18 @@ const newpethandler = async function (event) {
   const name = document.getElementById("petnameinput").value;
   const age = document.getElementById("petageinput").value;
   const gender = document.getElementById("pet-gender").value;
-  const image = document.getElementById("formFile")
+  const description = document.getElementById("petdesc").value;
+  const image = document.getElementById("formFile");
 
   const formData = new FormData();
 
-  formData.append("name", name)
-  formData.append("age", age)
-  formData.append("gender", gender)
-  formData.append("file", image.files[0])
+  formData.append("name", name);
+  formData.append("age", age);
+  formData.append("gender", gender);
+  formData.append("description", description);
+  formData.append("file", image.files[0]);
 
   console.log("click");
-
 
   const response = await fetch(`/api/pet`, {
     method: "POST",
