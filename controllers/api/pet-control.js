@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Pet, Image } = require("../../models");
 const logAuth = require("../../utils/auth");
 const upload = require("../../utils/upload");
-const fs = require('fs')
+const fs = require("fs");
 
 router.post("/", logAuth, upload.single("file"), async (req, res) => {
   if (req.file == undefined) {
@@ -13,6 +13,7 @@ router.post("/", logAuth, upload.single("file"), async (req, res) => {
       name: req.body.name,
       age: req.body.age,
       gender: req.body.gender,
+      description: req.body.description,
       userId: req.session.userId,
     });
     if (!petInfo) {

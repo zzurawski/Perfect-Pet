@@ -44,7 +44,7 @@ router.get("/singlepet/:id", async (req, res) => {
       const pet = petsData.get({ plain: true });
       res.render("selectedpet", {
         pet,
-        canManip: req.session.userId === pet.userId,
+        logged_in: req.session.logged_in,
       });
     } else {
       res.status(404).end();
