@@ -7,3 +7,5 @@ const logAuth = (req, res, next) => {
 };
 
 module.exports = logAuth;
+
+// if not logged in send to diffrent page

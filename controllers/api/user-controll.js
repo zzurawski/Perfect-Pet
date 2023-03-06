@@ -1,6 +1,6 @@
 const { User } = require("../../models");
 const router = require("express").Router();
-
+// saves user info
 router.post("/", async (req, res) => {
   try {
     const userVal = await User.create(req.body);
@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
     res.status(400).json(error);
   }
 });
-
+// finds and matches login info
 router.post("/login", async (req, res) => {
   try {
     const userVal = await User.findOne({
@@ -40,7 +40,7 @@ router.post("/login", async (req, res) => {
     res.status(400).json(error, { message: "something has gone wrong" });
   }
 });
-
+// logut user
 router.post("/logout", (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

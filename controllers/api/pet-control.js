@@ -3,7 +3,7 @@ const { Pet, Image } = require("../../models");
 const logAuth = require("../../utils/auth");
 const upload = require("../../utils/upload");
 const fs = require("fs");
-
+// creates pet
 router.post("/", logAuth, upload.single("file"), async (req, res) => {
   if (req.file == undefined) {
     return res.send(`You must select a file.`);
@@ -19,7 +19,7 @@ router.post("/", logAuth, upload.single("file"), async (req, res) => {
     if (!petInfo) {
       res.status(400).json({ message: "failed to create" });
     }
-
+// creates image
     const image = await Image.create({
       type: req.file.mimetype,
       name: req.file.originalname,
@@ -39,7 +39,7 @@ router.post("/", logAuth, upload.single("file"), async (req, res) => {
     res.status(500).json(error, { message: "something went wrong" });
   }
 });
-
+// deletes pet
 router.delete("/:id", logAuth, async (req, res) => {
   try {
     const petInfo = await Pet.destroy({

@@ -1,3 +1,4 @@
+// deletes pet and adds listener to buttons 
 const deletebutton = document.querySelectorAll(".deleteme");
 deletebutton.forEach((button) => {
   button.addEventListener("click", async function (event) {

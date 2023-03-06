@@ -1,3 +1,4 @@
+// starts server
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
@@ -10,9 +11,9 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+// creates helpers
 const hbs = exphbs.create({ helpers });
-
+// creates session/ session cookie
 const sess = {
   secret: process.env.SECRET,
   cookie: {
@@ -28,8 +29,9 @@ const sess = {
   }),
 };
 
+// uses sess as session
 app.use(session(sess));
-
+// engine handlebars
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 

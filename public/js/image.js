@@ -15,3 +15,5 @@ let imagesPreview = function (input, placeToInsertImagePreview) {
 $("#formFile").on("change", function () {
   imagesPreview(this, "div.preview-images");
 });
+
+// uploads image and displays preview

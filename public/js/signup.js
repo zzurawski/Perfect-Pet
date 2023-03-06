@@ -1,3 +1,4 @@
+// signs up and logs on
 const loginHandler = async function (event) {
   event.preventDefault();
 

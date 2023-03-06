@@ -1,7 +1,8 @@
+// renders profile routes
 const router = require("express").Router();
 const { Pet, User, Image } = require("../models");
 const logAuth = require("../utils/auth");
-
+// gets your pets that you have posted with your user ID
 router.get("/", logAuth, async (req, res) => {
   try {
     const petInfo = await Pet.findAll({
@@ -20,7 +21,7 @@ router.get("/", logAuth, async (req, res) => {
     res.status(500).json(error);
   }
 });
-
+// renders new pet
 router.get("/newpet", logAuth, (req, res) => {
   res.render("newpet", {
     layout: "profile",

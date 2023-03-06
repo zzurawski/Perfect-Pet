@@ -6,3 +6,5 @@ module.exports = {
       .slice(-2)}`;
   },
 };
+
+// fromats date as M/DD/YY

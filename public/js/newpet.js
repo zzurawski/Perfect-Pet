@@ -1,3 +1,4 @@
+// creates new pet as form data, img must be read as form data
 const newpethandler = async function (event) {
   event.preventDefault();
   const name = document.getElementById("petnameinput").value;

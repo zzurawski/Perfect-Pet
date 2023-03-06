@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { Pet, User, Image } = require("../models");
-
+// gets all created pets
 router.get("/pets", async (req, res) => {
   try {
     const petsData = await Pet.findAll({
@@ -12,7 +12,7 @@ router.get("/pets", async (req, res) => {
     req.status(500).json(error);
   }
 });
-
+// gets pets for home page, limit 4
 router.get("/", async (req, res) => {
   try {
     const petsData = await Pet.findAll({
@@ -29,7 +29,7 @@ router.get("/", async (req, res) => {
     req.status(500).json(error);
   }
 });
-
+// gets single pet
 router.get("/singlepet/:id", async (req, res) => {
   try {
     const petsData = await Pet.findByPk(req.params.id, {
@@ -53,7 +53,7 @@ router.get("/singlepet/:id", async (req, res) => {
     res.status(500).json(error);
   }
 });
-
+// renders login page
 router.get("/login", (req, res) => {
   console.log(req.session);
   if (req.session.logged_in) {
