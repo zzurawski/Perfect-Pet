@@ -9,7 +9,7 @@ router.get("/pets", async (req, res) => {
     const pets = petsData.map((pets) => pets.get({ plain: true }));
     res.render("pets", { pets, logged_in: req.session.logged_in });
   } catch (error) {
-    req.statusCode(500).json(error);
+    req.status(500).json(error);
   }
 });
 
@@ -27,7 +27,7 @@ router.get("/", async (req, res) => {
     console.log(pets);
     res.render("homepage", { pets, logged_in: req.session.logged_in });
   } catch (error) {
-    req.statusCode(500).json(error);
+    req.status(500).json(error);
   }
 });
 
