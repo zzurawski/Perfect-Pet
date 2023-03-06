@@ -18,7 +18,6 @@ router.get("/", async (req, res) => {
     const petsData = await Pet.findAll({
       include: [User, { model: Image }],
       limit: 4,
-      order: [["posted", "DESC"]],
     });
 
     console.log(petsData);
