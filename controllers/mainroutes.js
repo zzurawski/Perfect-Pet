@@ -5,6 +5,7 @@ router.get("/pets", async (req, res) => {
   try {
     const petsData = await Pet.findAll({
       include: [User, { model: Image }],
+      order: [["posted", "DESC"]],
     });
     const pets = petsData.map((pets) => pets.get({ plain: true }));
     res.render("pets", { pets, logged_in: req.session.logged_in });
@@ -18,6 +19,7 @@ router.get("/", async (req, res) => {
     const petsData = await Pet.findAll({
       include: [User, { model: Image }],
       limit: 4,
+      order: [["posted", "DESC"]],
     });
 
     console.log(petsData);
