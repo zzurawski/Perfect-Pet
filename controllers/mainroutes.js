@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Pet, Comment, User, Image } = require("../models");
+const { Pet, User, Image } = require("../models");
 
 router.get("/pets", async (req, res) => {
   try {
@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
     const petsData = await Pet.findAll({
       include: [User, { model: Image }],
       limit: 4,
-      order: [["posted, DESC"]],
+      order: [["posted", "DESC"]],
     });
 
     console.log(petsData);
