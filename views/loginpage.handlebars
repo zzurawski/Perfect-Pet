@@ -1,0 +1,54 @@
+{{! This page will render if you need to login or sign up  }}
+
+<form id="login-section">
+  <h2>Log In</h2>
+  <div class="mb-3">
+    <label for="emailinput" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="inputEmail"
+      aria-describedby="email"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="passwordinput" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword" />
+  </div>
+  <button type="submit" class="btn btn-primary">Log in</button>
+</form>
+
+<form id="signupnow">
+  <h2>Sign Up</h2>
+  <div class="mb-3">
+    <label for="Inputname" class="form-label">Username</label>
+    <input
+      type="name"
+      class="form-control"
+      id="inputUser"
+      aria-describedby="user"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="email-input" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="inputEmail2"
+      aria-describedby="email"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="password-input" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" />
+  </div>
+  <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+      Must be at least 8 characters long.
+    </span>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign up</button>
+</form>
+
+<script src="/js/signup.js"></script>

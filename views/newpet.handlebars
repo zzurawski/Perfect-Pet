@@ -1,0 +1,55 @@
+{{!-- add pet form --}}
+<form id="petcreation">
+  <h2>Create pet</h2>
+  <div class="mb-3">
+    <label for="pet-name" class="form-label">Pet Name</label>
+    <input
+      type="name"
+      class="form-control"
+      id="petnameinput"
+      aria-describedby="pet-names"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="pet-age" class="form-label">Age</label>
+    <input
+      type="name"
+      class="form-control"
+      id="petageinput"
+      aria-describedby="pet-age"
+    />
+
+  <div class="mb-3">
+    <label for="pet-gender" class="form-label">Gender</label>
+    <input type="name" class="form-control" id="pet-gender" />
+  </div>
+
+    <div class="mb-3">
+    <label for="pet-desc" class="form-label">Pet Personality</label>
+    <textarea class="form-control" id="petdesc" rows="3"></textarea>
+    {{!-- <input
+      type="name"
+      class="form-control"
+      id="pettypeinput"
+      aria-describedby="pet-names"
+    /> --}}
+  </div>
+
+  <div class="mb-3">
+  <label for="formFile" class="form-label">Picture of your Pet</label>
+  <input class="form-control" type="file" id="formFile">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add pet </button>
+</form>
+<div class="preview-images">
+
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
+
+<script src="/js/newpet.js"></script>
+<script src="/js/image.js"></script>

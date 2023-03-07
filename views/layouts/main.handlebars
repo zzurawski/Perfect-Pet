@@ -1,3 +1,4 @@
+{{!-- renders main --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,30 +7,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfect Pet</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/style.css" >
 </head>
 
 <body>
  
-<header>
-  <h1><p>Perfect Pets!</p></h1>
+<header class="begin">
+  <h1 class="title"> <a href="/">Perfect Pets!</a></h1>
   <nav>
-  <div class="row">
+  <div class="d-flex justify-content-around mt-3">
     <div class="col">
-      <a href="/About Us">About Us</a>
+      <a href="/profile" id="profile">Profile</a>
     </div>
     <div class="col">
-      <a href="/Pets">Pets</a>
+      <a href="/Pets" id="pets">Pets</a>
     </div>
-    <div class="col">
       {{#if logged_in}}
+    <div class="col">
       <button class="no-button" id="logout">Logout</button>
-      {{#else}}
-      <a href="/login">Log in/Sign Up</a>
-      {{/if}}
       </div>
+  {{else}}
+   <div class="col">
+      <a href="/Login" id="login">Login</a>
+    </div>
+      {{/if}}
   </nav>
-  </div>
-</div>
 </header>
   <main class="container container-fluid mt-5">
     <!-- Render the contents of the sub layout here -->
@@ -43,3 +45,5 @@
 </body>
 
 </html>
+
+<script src="/js/logout.js"></script>

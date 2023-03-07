@@ -1,0 +1,190 @@
+h1 {
+  margin: 1px;
+  font-size: 45px;
+}
+
+.begin {
+  background-image: linear-gradient(rgb(9, 82, 87), teal);
+  color: bisque;
+  border: 5px solid black;
+  text-align: center;
+}
+
+.begin a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  margin: 100px;
+}
+
+#nav {
+  font-weight: bold;
+  text-decoration: underline black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
+
+h2 {
+  margin: 5px;
+}
+
+.title2 {
+  text-align: center;
+  margin-top: 30px;
+}
+/* 
+/* .card-home {
+   text-align: center; 
+}  */
+
+/* .card-home h5 {
+  margin-left: 30px;
+} */
+
+li {
+  list-style-type: none;
+}
+
+.btn-home {
+  margin: auto;
+}
+
+.card a {
+  text-align: left;
+}
+
+.title a {
+  margin-left: 70px;
+}
+
+body {
+  background: rgb(71, 122, 122);
+}
+
+.card {
+  background: bisque;
+  border: 2px black solid;
+}
+
+#logout {
+  background-color: rgb(0, 0, 17);
+  color: bisque;
+  text-align: center;
+  font-weight: bold;
+}
+
+#logout:hover {
+  background-color: teal;
+  color: black;
+  cursor: grab;
+}
+
+#profile:hover {
+  color: bisque;
+  cursor: grab;
+}
+
+#pets:hover {
+  color: bisque;
+  cursor: grab;
+}
+
+#login:hover {
+  color: bisque;
+  cursor: grab;
+}
+
+img {
+  max-width: 214px;
+  max-height: 214px;
+}
+.card-text a {
+  font-size: 15px;
+  font-weight: bold;
+}
+.card-text a:hover {
+  color: teal;
+}
+.title a {
+  /* margin-left: 70px; */
+  font-size: 45px;
+}
+
+.title a:hover {
+  color: bisque;
+}
+.mb-6 {
+  color: bisque;
+  text-align: center;
+  font-style: italic;
+}
+
+#homepage-main {
+  background-color: bisque;
+  color: rgb(0, 0, 0);
+  font-weight: lighter;
+  text-align: center;
+  border: 2px solid rgb(0, 99, 99);
+}
+
+#aboutus-header {
+  text-decoration: underline;
+  color: rgb(0, 29, 29);
+}
+
+#about-us {
+  background-color: bisque;
+  font-style: italic;
+}
+
+.card-pets {
+  max-width: 239.34px;
+  min-width: 239.34px;
+  min-height: 331.17px;
+}
+
+#profile-home:hover {
+  color: bisque;
+  cursor: grab;
+}
+
+#profile-home {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#profile-pets {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#profile-pets:hover {
+  color: bisque;
+  cursor: grab;
+}
+
+#profile-newpet:hover {
+  color: bisque;
+  cursor: grab;
+}
+
+#profile-newpet {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#profile-yourpets {
+  text-decoration: underline;
+  color: bisque;
+  text-align: center;
+}
+#profile,
+#pets,
+#login {
+  font-weight: bold;
+  text-decoration: underline;
+}

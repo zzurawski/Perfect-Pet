@@ -1,0 +1,25 @@
+{{!-- renders selected pets --}}
+<section class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <div class="card text-center" id="display">
+        <div class="card-header">
+          <p class="card-text"> {{pet.name}} posted by {{pet.user.username}}</p>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><img
+              src="data:image/jpeg;base64, {{pet.image.data}}"
+            /></p>
+          <p class="card-text"> Age: {{pet.age}}</p>
+          <p class="card-text"> Gender: {{pet.gender}} </p>
+          <p class="card-text"> Personality: {{pet.description}} </p>
+          <p class="card-text"> Date Posted: {{date_maker pet.posted}}</p>
+          <p class="card-text">if intrested please click:<a
+              href="mailto:{{pet.user.email}}"
+            > Email </a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

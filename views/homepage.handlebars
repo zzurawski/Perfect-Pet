@@ -1,0 +1,38 @@
+{{! Put a very cliche about us on here. }}
+
+<header class="mb-6">
+  <p>Personally Dedicated to Finding your Perfect Companion</p>
+</header>
+
+{{!-- renders homepage --}}
+<div id="homepage-main">
+  <h2 id="aboutus-header">About Us</h2>
+  <p id="about-us">
+    Here at 'Perfect Pet', we believe life should always have good company. We
+    pride ourselves on placing people to companions that can fufill each of our
+    lives to a higher degree. With the wonders of technology, we find pets from
+    owners or shelters from around the country with pets in need. Each pet has
+    their own unique personalities and so do we. Through our website, you can
+    filter based on your individual preferences to find that truly Perfect Pet.
+  </p>
+</div>
+<section class="d-flex flex-row flex-wrap justify-content-center">
+  {{#each pets as |pet|}}
+    <div class="card card-pets text-center" id="display">
+      <div class="card-header">
+        <p class="card-text"><a href="/singlepet/{{pet.id}}">{{pet.name}}</a>
+          posted on
+          {{date_maker pet.posted}}</p>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><img
+            src="data:image/jpeg;base64, {{pet.image.data}}"
+          /></p>
+        <p class="card-text"> posted by: {{pet.user.username}}</p>
+        <p class="card-text">
+          <a href="/singlepet/{{pet.id}}" class="btn btn-primary btn-home">See
+            more</a></p>
+      </div>
+    </div>
+  {{/each}}
+</section>
