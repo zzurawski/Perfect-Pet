@@ -14,7 +14,6 @@ h1 {
   text-decoration: none;
   color: black;
   font-size: 25px;
-  margin: 100px;
 }
 
 #nav {
@@ -55,10 +54,6 @@ li {
 
 .card a {
   text-align: left;
-}
-
-.title a {
-  margin-left: 70px;
 }
 
 body {
